@@ -1,0 +1,57 @@
+{
+  "name": "react-spa-template",
+  "version": "1.0.0",
+  "type": "module",
+  "keywords": [
+    "react",
+    "vite",
+    "typescript",
+    "eslint",
+    "prettier",
+    "stylelint"
+  ],
+  "description": "",
+  "scripts": {
+    "prepare": "husky",
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint:js": "eslint --ext .js,.jsx,.ts,.tsx .",
+    "lint:styles": "stylelint '{styles,src}/**/*.scss'",
+    "lint:prettier": "prettier --check '**/*.md'",
+    "lint": "npm run lint:js && npm run lint:styles && npm run lint:prettier",
+    "test": "exit 0"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@kochurko/eslint-config": "^0.9.1",
+    "@kochurko/prettier-config": "^0.9.1",
+    "@kochurko/stylelint-config": "^0.9.1",
+    "@kochurko/ts-config": "^0.9.4",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "esbuild-sass-plugin": "^3.3.1",
+    "eslint": "^8.57.0",
+    "husky": "^9.0.11",
+    "sass": "^1.77.6",
+    "typescript": "^5.5.3",
+    "vite": "^5.3.3",
+    "vite-plugin-svgr": "^4.2.0"
+  },
+  "lint-staged": {
+    "*.{scss}": [
+      "stylelint --fix --quiet"
+    ],
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix --quiet",
+      "prettier --write"
+    ],
+    "*.md": [
+      "prettier --write"
+    ]
+  }
+}

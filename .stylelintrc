@@ -1,0 +1,5 @@
+{
+  "extends": [
+    "@kochurko/stylelint-config", "@kochurko/stylelint-config/prettier"
+  ]
+}
